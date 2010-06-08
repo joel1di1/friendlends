@@ -1,0 +1,23 @@
+<p>
+  <b>Desc:</b>
+  <%=h @loan.desc %>
+</p>
+
+<p>
+  <b>Borrower:</b>
+  <%=h @loan.borrower %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%=h @loan.start_date %>
+</p>
+
+<p>
+  <b>Return date:</b>
+  <%=h @loan.return_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_loan_path(@loan) %> |
+<%= link_to 'Back', loans_path %>

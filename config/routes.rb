@@ -1,7 +1,25 @@
 ActionController::Routing::Routes.draw do |map|
-  map.devise_for :users
+  map.resources :loans
 
-  map.resources :homes
+  map.resources :loans
+
+  map.resources :loans
+
+  map.resources :loans
+
+  map.resources :loans
+
+  map.resources :loans
+
+  map.resources :posts
+
+  map.resources :loans
+
+  map.resources :loans
+
+  map.devise_for :users
+  map.resources :homes , :only => [:index]
+  map.resources :loans
 
   # The priority is based upon order of creation: first created -> highest priority.
 
