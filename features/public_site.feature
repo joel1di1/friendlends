@@ -6,7 +6,9 @@ Feature: Public site
   Scenario: First view of the site
     Given I am a unregistred user
     When I visit the home page
-    Then I should see "Bienvenue dans 'Où est ma perceuse ?"
+    Then I should see "Bienvenue dans 'Où est ma perceuse ?'"
+    And I should see "sign up"
+    And I should see "sign in"
 
   # Rails generates Delete links that use Javascript to pop up a confirmation
   # dialog and then do a HTTP POST request (emulated DELETE request).
