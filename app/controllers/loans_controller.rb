@@ -1,8 +1,11 @@
 class LoansController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /loans
   # GET /loans.xml
   def index
     @loans = Loan.all
+     @loan = Loan.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +19,7 @@ class LoansController < ApplicationController
     @loan = Loan.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html {render :action => "update"}
       format.xml  { render :xml => @loan }
     end
   end
@@ -24,8 +27,8 @@ class LoansController < ApplicationController
   # GET /loans/new
   # GET /loans/new.xml
   def new
-    @loan = Loan.new
-
+    @loan = Loan.new 
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @loan }
@@ -41,10 +44,11 @@ class LoansController < ApplicationController
   # POST /loans.xml
   def create
     @loan = Loan.new(params[:loan])
+    @loan.start_date = Date.today
 
     respond_to do |format|
       if @loan.save
-        format.html { redirect_to(@loan, :notice => 'Loan was successfully created.') }
+        format.html { redirect_to(loans_url, :notice => 'Loan was successfully created.') }
         format.xml  { render :xml => @loan, :status => :created, :location => @loan }
       else
         format.html { render :action => "new" }
@@ -60,10 +64,10 @@ class LoansController < ApplicationController
 
     respond_to do |format|
       if @loan.update_attributes(params[:loan])
-        format.html { redirect_to(@loan, :notice => 'Loan was successfully updated.') }
+        format.html { redirect_to(edit_loan_path, :notice => 'Loan was successfully updated.') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "update" }
         format.xml  { render :xml => @loan.errors, :status => :unprocessable_entity }
       end
     end

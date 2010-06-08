@@ -1,5 +1,6 @@
 <h1>Listing loans</h1>
 
+<% form_for(@loan) do |f| %>
 <table>
   <tr>
     <th>Desc</th>
@@ -14,13 +15,15 @@
     <td><%=h loan.borrower %></td>
     <td><%=h loan.start_date %></td>
     <td><%=h loan.return_date %></td>
-    <td><%= link_to 'Show', loan %></td>
     <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
     <td><%= link_to 'Destroy', loan, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+  <tr>
+    <td><%= f.text_field :desc %></td>
+    <td><%= f.text_field :borrower %></td>
+    <td colspan="4"> <%= f.submit 'Create' %></td>
+    
+  </tr>
 </table>
-
-<br />
-
-<%= link_to 'New loan', new_loan_path %>
+<% end %>

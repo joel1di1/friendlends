@@ -1,21 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :loans
-
-  map.resources :loans
-
-  map.resources :loans
-
-  map.resources :loans
-
-  map.resources :loans
-
-  map.resources :loans
-
-  map.resources :posts
-
-  map.resources :loans
-
-  map.resources :loans
 
   map.devise_for :users
   map.resources :homes , :only => [:index]
