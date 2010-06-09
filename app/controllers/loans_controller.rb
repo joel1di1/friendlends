@@ -4,8 +4,8 @@ class LoansController < ApplicationController
   # GET /loans
   # GET /loans.xml
   def index
-    @loans = Loan.all
-     @loan = Loan.new
+    @loans = Loan.find(:all, :conditions => {"lender_id" => current_user.id})
+    @loan = Loan.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -45,6 +45,7 @@ class LoansController < ApplicationController
   def create
     @loan = Loan.new(params[:loan])
     @loan.start_date = Date.today
+    @loan.lender = current_user
 
     respond_to do |format|
       if @loan.save

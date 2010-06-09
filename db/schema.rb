@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100608231418) do
+ActiveRecord::Schema.define(:version => 20100609012340) do
 
   create_table "loans", :force => true do |t|
     t.string   "desc"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20100608231418) do
     t.string   "borrower"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "lender_id"
   end
 
   create_table "users", :force => true do |t|
