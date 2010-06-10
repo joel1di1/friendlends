@@ -20,6 +20,8 @@ fr:
   loan_return_date: "Rendu le"
   title: "Où est ma perçeuse ?"
   change_locale: "Anglais"
+  un_return: "Non rendu"
+  display_hide_returned: "Afficher/masquer les retours"
   
    
   devise:

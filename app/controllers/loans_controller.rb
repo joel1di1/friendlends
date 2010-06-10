@@ -4,7 +4,11 @@ class LoansController < ApplicationController
   # GET /loans
   # GET /loans.xml
   def index
-    @loans = Loan.find(:all, :conditions => {"lender_id" => current_user.id})
+    if params[:display_returned]
+      @loans = Loan.find(:all, :conditions => {"lender_id" => current_user.id})
+    else
+      @loans = Loan.find(:all, :conditions => {"lender_id" => current_user.id, :return_date => nil})
+    end
     @loan = Loan.new
 
     respond_to do |format|
@@ -72,6 +76,20 @@ class LoansController < ApplicationController
         format.xml  { head :ok }
       else
         format.html { redirect_to(loans_path, :notice => t(:loan_return_ko)) }
+        format.xml  { render :xml => @loan.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  
+  def un_return
+    @loan = Loan.find(params[:id])
+    respond_to do |format|
+      @loan.return_date = nil
+      if @loan.save
+        format.html { redirect_to(loans_path, :notice => t(:loan_un_return_ok)) }
+        format.xml  { head :ok }
+      else
+        format.html { redirect_to(loans_path, :notice => t(:loan_un_return_ko)) }
         format.xml  { render :xml => @loan.errors, :status => :unprocessable_entity }
       end
     end

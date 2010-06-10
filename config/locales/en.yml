@@ -20,3 +20,5 @@ en:
   loan_return_date: "Returned on"
   title: "Where is my drill ?"
   change_locale: "Français"
+  un_return: "Cancel return"
+  display_hide_returned: "display/hide return items"

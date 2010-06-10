@@ -11,6 +11,8 @@
       = t :loan_date
     %th
       = t :loan_return_date
+    %th
+      = link_to t(:display_hide_returned), {:display_returned => !params[:display_returned]}
   - @loans.each do |loan| 
     %tr
       %td 
@@ -22,12 +24,15 @@
       %td 
         = loan.return_date 
       %td 
-        = button_to t(:return), { :action => "return", :id => loan.id }
-          
+        - if !loan.return_date
+          = button_to t(:return), { :action => "return", :id => loan.id }
+        - else
+          = button_to t(:un_return), { :action => "un_return", :id => loan.id }
       %td 
         = link_to 'Edit', edit_loan_path(loan)
       %td 
         = link_to t(:delete), loan, :confirm =>  t(:confirm), :method => :delete
+          
   %tr
     - form_for(@loan) do |f|
       %td 
