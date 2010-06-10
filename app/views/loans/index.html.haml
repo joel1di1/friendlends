@@ -1,0 +1,39 @@
+%h1 
+  =t :loans_title
+
+%table
+  %tr
+    %th 
+      = t :lend_object
+    %th 
+      = t :borrower
+    %th 
+      = t :loan_date
+    %th
+      = t :loan_return_date
+  - @loans.each do |loan| 
+    %tr
+      %td 
+        = loan.desc
+      %td 
+        = loan.borrower
+      %td 
+        = l loan.start_date, :format => :short
+      %td 
+        = loan.return_date 
+      %td 
+        = button_to t(:return), { :action => "return", :id => loan.id }
+          
+      %td 
+        = link_to 'Edit', edit_loan_path(loan)
+      %td 
+        = link_to t(:delete), loan, :confirm =>  t(:confirm), :method => :delete
+  %tr
+    - form_for(@loan) do |f|
+      %td 
+        = f.text_field :desc
+      %td 
+        = f.text_field :borrower
+      %td{:colspan => "4"} 
+        = f.submit 'Create' 
+
