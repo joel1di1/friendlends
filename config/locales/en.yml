@@ -18,3 +18,5 @@ en:
   loan_return_ok: "Loan has been returned, great !"
   loan_return_ko: "Error during loan return, try again..."
   loan_return_date: "Returned on"
+  title: "Where is my drill ?"
+  change_locale: "Français"

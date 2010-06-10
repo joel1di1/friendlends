@@ -18,6 +18,9 @@ fr:
   loan_return_ok: "L'objet vous a été rendu, chouette !"
   loan_return_ko: "Une erreur est intervenue pendant cette opération."
   loan_return_date: "Rendu le"
+  title: "Où est ma perçeuse ?"
+  change_locale: "Anglais"
+  
    
   devise:
     failure:
