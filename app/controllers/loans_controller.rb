@@ -24,17 +24,6 @@ class LoansController < ApplicationController
     end
   end
 
-  # GET /loans/new
-  # GET /loans/new.xml
-  def new
-    @loan = Loan.new 
-    
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @loan }
-    end
-  end
-
   # GET /loans/1/edit
   def edit
     @loan = Loan.find(params[:id])
@@ -69,6 +58,20 @@ class LoansController < ApplicationController
         format.xml  { head :ok }
       else
         format.html { render :action => "update" }
+        format.xml  { render :xml => @loan.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  
+  def return
+    @loan = Loan.find(params[:id])
+    respond_to do |format|
+      @loan.return_date = Date.today
+      if @loan.save
+        format.html { redirect_to(loans_path, :notice => t(:loan_return_ok)) }
+        format.xml  { head :ok }
+      else
+        format.html { redirect_to(loans_path, :notice => t(:loan_return_ko)) }
         format.xml  { render :xml => @loan.errors, :status => :unprocessable_entity }
       end
     end

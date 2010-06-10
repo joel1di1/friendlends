@@ -3,3 +3,18 @@
 
 en:
   hello: "Hello world"
+  lend_object: "Object"
+  borrower: "Borrower"
+  loan_date: "Date"  
+  loans_title: "My loans"
+  sign_up: "sign up"
+  sign_out: "sign out"
+  sign_in: "sign in"
+  or: "or"
+  sign_in_as: "Sign in as"
+  delete: "Delete"
+  confirm: :"Are you sure ?"
+  return: "Return"
+  loan_return_ok: "Loan has been returned, great !"
+  loan_return_ko: "Error during loan return, try again..."
+  loan_return_date: "Returned on"

@@ -1,2 +1,4 @@
 devise --version 1.0.7
 heroku --version 1.9.9
+rails --version 2.3.8
+haml
