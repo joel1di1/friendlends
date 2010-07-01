@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   def set_locale
     # if params[:locale] is nil then I18n.default_locale will be used
-    I18n.locale = I18n.available_locales.include?(params[:locale].to_sym) ? params[:locale] : nil
+    I18n.locale = I18n.available_locales.include?(params[:locale].to_sym) ? params[:locale] : nil if params[:locale]
   end
   
   def default_url_options(options={})
