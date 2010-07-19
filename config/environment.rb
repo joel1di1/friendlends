@@ -23,7 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "heroku", :version => '1.9.9'
   config.gem "haml"
   config.gem "rails", :version => '2.3.8'
-#  config.gem 'hoptoad_notifier'
+  config.gem 'hoptoad_notifier'
   
 
   # Only load the plugins named here, in the order given (default is alphabetical).
