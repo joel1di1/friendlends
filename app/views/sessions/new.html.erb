@@ -1,4 +1,4 @@
-<h2><%= t :sign_in %></h2>
+<h2>Sign in</h2>
 
 <% form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
   <p><%= f.label :email %></p>
@@ -14,5 +14,12 @@
   <p><%= f.submit "Sign in" %></p>
 <% end -%>
 
-<h2>OR connect with your facebook account </h2>
-<fb:login-button></fb:login-button>
+OR
+
+<% unless signed_in?(:user) %>
+  <%= facebook_sign_in_link :user %>
+<% else %>
+  <%= facebook_sign_out_link :user %>
+<% end %>
+
+<%= render :partial => "shared/devise_links" %>

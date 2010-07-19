@@ -24,6 +24,8 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "rails", :version => '2.3.8'
   config.gem 'hoptoad_notifier'
+  config.gem 'facebooker'
+  config.gem 'devise_facebook_connectable'
   
 
   # Only load the plugins named here, in the order given (default is alphabetical).
