@@ -18,10 +18,12 @@ defaults: &defaults
     #   local_port: 3000
 
 development:
-  <<: *defaults
+    api_key: 61dca75f6feadf0f9dc17e5c4546e965
+    secret_key: ab8bebc09bb68ea69fd96c028745ee3a
 
 test: &test
-  <<: *defaults
+    api_key: 61dca75f6feadf0f9dc17e5c4546e965
+    secret_key: ab8bebc09bb68ea69fd96c028745ee3a
 
 production: &production
   <<: *defaults

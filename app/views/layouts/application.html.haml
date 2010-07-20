@@ -6,9 +6,16 @@
     %title 
       = t :title
     = stylesheet_link_tag :all
-    = javascript_include_tag :defaults
+    
+    = fb_connect_javascript_tag(:lang => ::I18n.locale)
+    = javascript_include_tag :defaults, 'devise.facebook_connectable'
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
+    
     = yield(:head)
   %body
+    %script
+      jQuery.noConflict();
+    = init_fb_connect :XFBML, :js => :jquery
     %center
       #container
         .user_nav
@@ -16,30 +23,12 @@
             = t :sign_in_as
             %b #{current_user.email}
             = link_to t(:sign_out), destroy_user_session_path
-          - else
-            = link_to t(:sign_up), new_user_registration_path
-            = t :or
-            = link_to t(:sign_in), new_user_session_path
+         
         .change_locale 
           = link_to t(:change_locale), I18n.locale == :en ? '/?locale=fr' : '/?locale=en'
         %p.notice= notice
         %p.alert= alert
+        
         = yield
 
-    #fb-root
-    %script{:src=>"http://connect.facebook.net/en_US/all.js"}
-    %script
-      FB.init({appId: '114011555315114', status: true, cookie: true, xfbml: true});
-      FB.Event.subscribe('auth.login', function(response) {
-      window.location.reload();
-      });
-      FB.Event.subscribe('auth.sessionChange', function(response) {
-      if (response.session) {
-      alert('ouestmaperceuse connecte avec FB !')
-      FB.api('/me', function(response) {
-      alert(response.name);
-      });
-      } else {
-      alert('Deconnexion FB !')
-      }
-      });
+  
