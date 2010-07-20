@@ -1,6 +1,7 @@
-devise --version 1.0.7
+devise --version 1.0.8
 heroku --version 1.9.9
 rails --version 2.3.8
+warden
 haml
 facebooker
 devise_facebook_connectable

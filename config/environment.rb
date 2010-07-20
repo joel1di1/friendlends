@@ -19,13 +19,14 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "devise", :version => '1.0.7'
+  config.gem "devise", :version => '1.0.8'
   config.gem "heroku", :version => '1.9.9'
   config.gem "haml"
   config.gem "rails", :version => '2.3.8'
   config.gem 'hoptoad_notifier'
   config.gem 'facebooker'
   config.gem 'devise_facebook_connectable'
+  config.gem 'warden'
   
 
   # Only load the plugins named here, in the order given (default is alphabetical).
