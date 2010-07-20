@@ -1,5 +1,6 @@
 !!!
-%html(xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml")
+%html(xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://www.facebook.com/2008/fbml")
   %head
     %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
     %title 
@@ -26,3 +27,11 @@
         %p.notice= notice
         %p.alert= alert
         = yield
+
+    #fb-root
+    %script{:src=>"http://connect.facebook.net/en_US/all.js"}
+    %script
+      FB.init({appId: '114011555315114', status: true, cookie: true, xfbml: true});
+      FB.Event.subscribe('auth.login', function(response) {
+      window.location.reload();
+      });

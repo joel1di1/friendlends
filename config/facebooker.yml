@@ -1,7 +1,7 @@
 defaults: &defaults
     # Required.
-    api_key: 2b90dedca0019da4dcd52c9ad1e1ac6c
-    secret_key: d2931530257d894f434ac12a91186d3d
+    api_key: '2b90dedca0019da4dcd52c9ad1e1ac6c'
+    secret_key: 'd2931530257d894f434ac12a91186d3d'
 
     # Optional for Facebook Connect.
     # canvas_page_name: YOUR_APP_CANVAS_NAME
