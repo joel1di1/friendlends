@@ -43,6 +43,8 @@ fr:
       facebook_actions:
         sign_in: "Sign in"
         sign_out: "Sign out"
+      user:
+        unauthenticated: 'Vous devez vous connecter pour continuer.'
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
       updated: 'Your password was changed successfully. You are now signed in.'

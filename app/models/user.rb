@@ -1,23 +1,24 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :http_authenticatable, :token_authenticatable, :confirmable, :lockable, :timeoutable and :activatable
-  devise :registerable, :authenticatable, :recoverable, :rememberable, :trackable, :validatable, :facebook_connectable
+  devise :registerable, :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :facebook_connectable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation
   
   has_many :loans
   
-  def before_facebook_connect(fb_session)
+  def after_facebook_connect(fb_session)
 
     fb_session.user.populate(:locale, :current_location, :username, :name, :first_name, :last_name,
-                              :birthday_date, :sex, :city, :state, :country)
+                              :birthday_date, :sex, :city, :state, :country, :email)
 
     self.locale             = my_fancy_locale_parser(fb_session.user.locale)
     self.time_zone          = fb_session.user.current_location.try(:city)
     self.country            = fb_session.user.current_location.try(:country)
 
     self.username           = fb_session.user.username
+    self.email              = fb_session.user.email
 
     self.profile.real_name  = fb_session.user.name
     self.profile.first_name = fb_session.user.first_name
