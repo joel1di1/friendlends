@@ -22,8 +22,10 @@
           - if user_signed_in?
             = t :sign_in_as
             %b #{current_user.email}
-            = link_to t(:sign_out), destroy_user_session_path
-         
+            - if current_user.facebook_uid? 
+              = facebook_sign_out_link :label=>t(:sign_out)
+            - else
+              = link_to t(:sign_out), destroy_user_session_path
         .change_locale 
           = link_to t(:change_locale), I18n.locale == :en ? '/?locale=fr' : '/?locale=en'
         %p.notice= notice
