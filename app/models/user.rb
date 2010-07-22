@@ -12,8 +12,7 @@ class User < ActiveRecord::Base
     
     fb_session.user.populate(:locale, :current_location, :username, :name, :first_name, :last_name,
                               :birthday_date, :sex, :city, :state, :country)
-                              
-    self.username           = fb_session.user.first_name + " " + fb_session.user.last_name
 
+    self.username           = fb_session.user.first_name + " " + fb_session.user.last_name
   end
 end
