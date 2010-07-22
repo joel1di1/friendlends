@@ -22,7 +22,6 @@
           - if user_signed_in?
             = t :sign_in_as
             - if current_user.facebook_uid? 
-              TOTO
               %b #{current_user.username}
               :plain
                 <div class="facebook_connect_link sign_out">          
