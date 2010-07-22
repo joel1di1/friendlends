@@ -11,6 +11,9 @@ fr:
   sign_out: "déconnexion"
   sign_in: "connectez-vous"
   or: "ou"
+  email: email
+  password: mot de passe
+  remember_me: se souvenir de moi
   sign_in_as: "Connecté en tant que"
   delete: "Supprimer"
   confirm: "Etes-vous sûr ?"
