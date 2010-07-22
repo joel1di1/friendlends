@@ -7,7 +7,7 @@
 
 div#description {
   float: left;
-  width: 749px; }
+  width: 769px; }
 
 div#content {
   text-align: center; }
@@ -15,7 +15,7 @@ div#content {
 .right_col_container {
   float: left;
   border-left: 1px dotted #cccccc;
-  width: 250px; }
+  width: 230px; }
 
 h1 {
   white-space: nowrap; }

@@ -23,6 +23,7 @@
     - form_for resource_name, resource, :url => session_path(resource_name) do |f|
       = f.label t :email
       = f.text_field :email, :size=>30
+      %br
       = f.label t :password
       = f.password_field :password, :size=>30
 
