@@ -38,7 +38,8 @@
               = link_to t(:sign_out), destroy_user_session_path
           -else
             = t :already_member
-            = link_to t('devise.sessions.link'), :new_user_session
+            %b
+              = link_to t('devise.sessions.link'), :new_user_session
         %table.tbl-container
           %tr
             %td

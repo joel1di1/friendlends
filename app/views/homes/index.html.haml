@@ -21,4 +21,16 @@
         = t :tagline_1
       %h2
         = t :tagline_2
+      #hp-signup-btn
+        %table
+          %tbody
+            %tr
+              %td.left &nbsp;
+              %td#hp-signup-lnk.middle.link
+                = link_to t('devise.registrations.link'), :new_user_registration
+              %td.right &nbsp;
+              %td.tour
+                =t :or
+              %td.tour
+                = facebook_sign_in_link :perms=>'email', :id=>"fblogin"
       

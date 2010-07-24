@@ -55,7 +55,7 @@ h6 { font-size: 0.8em; margin: 1.2em 0em 0.4em 0em; }
 #pageheader a:active { color: #B3CFEB; text-decoration: underline; }
 #pageheader a:hover { color: #fff; text-decoration: underline; }
 
-#navheader { padding: 12px 0; clear: both; background-image: url('/img/bg_dot.gif'); background-repeat: repeat-x; background-position: left bottom; }
+#navheader { padding: 12px 0; clear: both; background-image: url('/images/bg_dot.gif'); background-repeat: repeat-x; background-position: left bottom; }
 #navheader .content { margin: 0em auto; width: 765px; }
 #navheader ul { display: inline; list-style: none;}
 #navheader li { display: inline; font-size: 1.1em; font-weight: bold; font-family: arial, helvetica, sans-serif; color: #A7A7A7; padding-right: 22px; }
@@ -73,7 +73,7 @@ h6 { font-size: 0.8em; margin: 1.2em 0em 0.4em 0em; }
 #container .content p { font-size: 1.0em; line-height: 1.3em; margin: 1.2em 0em 1.2em 0em; }
 #container .content ol, #container .content ul { font-size: 1.0em; line-height: 1.3em; margin: 0.4em 0 0.4em 2.0em; }
 
-#footer { background-image: url('/img/bg_dot.gif'); background-repeat: repeat-x; background-position: left top; color: #9A9CA0; padding: 7px 0 3px 0; clear: both; }
+#footer { background-image: url('/images/bg_dot.gif'); background-repeat: repeat-x; background-position: left top; color: #9A9CA0; padding: 7px 0 3px 0; clear: both; }
 #footer a:link { color: #9A9CA0; text-decoration: none; }
 #footer a:visited { color: #9A9CA0; text-decoration: none; }
 #footer a:active { color: #9A9CA0; text-decoration: none; }
@@ -137,7 +137,7 @@ h6 { font-size: 0.8em; margin: 1.2em 0em 0.4em 0em; }
 
 #navlist { float: right; margin-top: -5px; margin-bottom: 10px; margin-right: -20px; width: 150px; }
 #navlist ul { list-style: none; margin: 0; padding: 0; }
-#navlist ul li { background-image: url('/img/ico/ico_check_med_lbl.gif'); background-repeat: no-repeat; background-position: 0em 0.2em; padding-left: 22px; padding-bottom: 0.4em; font-size: 1.0em; font-weight: bold; }
+#navlist ul li { background-image: url('/images/ico/ico_check_med_lbl.gif'); background-repeat: no-repeat; background-position: 0em 0.2em; padding-left: 22px; padding-bottom: 0.4em; font-size: 1.0em; font-weight: bold; }
 
 /* Common */
 
@@ -145,7 +145,7 @@ h6 { font-size: 0.8em; margin: 1.2em 0em 0.4em 0em; }
 .feature-box h3 { margin-top: 0; }
 .feature-box p { margin: 0 !important; }
 .tip-box { border: 1px solid #CACACA; color: #575757; float: right; clear: both; width: 175px; padding: 13px; margin: 0 0 12px 12px; }
-.tip-box h3 { background-image: url('/img/ico/ico_help_blu.gif'); background-repeat: no-repeat; padding-left: 20px; color: #0060BF; font-size: 1.0em; margin: 0; margin-bottom: 0.4em; }
+.tip-box h3 { background-image: url('/images/ico/ico_help_blu.gif'); background-repeat: no-repeat; padding-left: 20px; color: #0060BF; font-size: 1.0em; margin: 0; margin-bottom: 0.4em; }
 .tip-box p { margin: 0 !important; }
 .greyborder { border-style: solid; border-width: 1px; border-color: #CACACA; margin-top: 8px; margin-bottom: 8px; margin-left: 25px; }
 .boxhighlight { border: 1px solid #cacaca; background-color: #E8EEF7; padding: 10px; }
@@ -154,7 +154,7 @@ h6 { font-size: 0.8em; margin: 1.2em 0em 0.4em 0em; }
 .statusmsgbox { padding-bottom: 20px; }
 .hiddenlabel { visibility: hidden; }
 hr { border: 0; background-color: #DADADA; color: #DADADA; height: 1px; }
-.hr-dotted { background-image: url('/img/bg_dot.gif'); background-repeat: repeat-x; }
+.hr-dotted { background-image: url('/images/bg_dot.gif'); background-repeat: repeat-x; }
 label { font-weight: bold; }
 
 /* Tables */
@@ -279,16 +279,16 @@ div.contentboxwrap .error_msg, div.contentboxwrap .success_msg { font-weight: bo
 div.contentboxwrap .error_msg { color: #EA5200; }
 div.contentboxwrap .success_msg { color: #0060BF; }
 div.contentboxwrap .error, div.contentboxwrap .success { padding-right: 15px; padding-bottom: 15px; }
-div.contentboxwrap .error { background: url('/img/ico/ico_cross_org.gif') no-repeat 0px 0px; }
-div.contentboxwrap .success { background: url('/img/ico/ico_check_blu.gif') no-repeat 0px 0px; }
+div.contentboxwrap .error { background: url('/images/ico/ico_cross_org.gif') no-repeat 0px 0px; }
+div.contentboxwrap .success { background: url('/images/ico/ico_check_blu.gif') no-repeat 0px 0px; }
 
 /* Navigation Tabs */
 
-div.navtabs { float: left; width: 100%; background: #fff url('/img/navtab_bg.gif') repeat-x bottom; line-height: normal; }
+div.navtabs { float: left; width: 100%; background: #fff url('/images/navtab_bg.gif') repeat-x bottom; line-height: normal; }
 div.navtabs ul { margin: 0px; padding: 10px 10px 0px 10px; list-style: none; }
 div.navtabs li { display: inline; margin: 0px; padding: 0px; }
-div.navtabs a { float: left; background: url('/img/navtab_l.png') 0px -300px no-repeat; margin: 0px; padding: 0px 2px 0px 9px; border-bottom: 1px solid #CACACA; text-decoration: none; }
-div.navtabs a span { float: left; display: block; background: url('/img/navtab_r.png') 100% -300px no-repeat; padding: 5px 11px 4px 2px; font-weight: bold; color: #fff; }
+div.navtabs a { float: left; background: url('/images/navtab_l.png') 0px -300px no-repeat; margin: 0px; padding: 0px 2px 0px 9px; border-bottom: 1px solid #CACACA; text-decoration: none; }
+div.navtabs a span { float: left; display: block; background: url('/images/navtab_r.png') 100% -300px no-repeat; padding: 5px 11px 4px 2px; font-weight: bold; color: #fff; }
 /* Commented Backslash Hack hides rule from IE5-Mac \*/
 div.navtabs a span { float:none; }
 /* End IE5-Mac hack */
@@ -308,8 +308,8 @@ div.navtabs li.navtab_smart a:hover span { background-position: 100% 0px; color:
 
 /* Grey Tabs */
 
-div.navtabs_grey a { background: url('/img/navtab_l.png') 0px -300px no-repeat; }
-div.navtabs_grey a span { background: url('/img/navtab_r.png') 100% -300px no-repeat; }
+div.navtabs_grey a { background: url('/images/navtab_l.png') 0px -300px no-repeat; }
+div.navtabs_grey a span { background: url('/images/navtab_r.png') 100% -300px no-repeat; }
 div.navtabs_grey li.navtab_current a { background-position: 0% -150px; border-width: 0px; }
 div.navtabs_grey li.navtab_current a span { background-position: 100% -150px; padding-bottom: 5px; color: #000; }
 div.navtabs_grey a:hover { background-position: 0% -150px; }
@@ -343,7 +343,7 @@ div.navtabs_grey a:hover span { background-position: 100% -150px; }
 #rtm-blog h1 { color: #EC5800; margin: 1.2em 0em 0.4em 0em; font-size: 1.5em; }
 #rtm-blog h2 { font-size: 1.4em; }
 #rtm-blog h3 { font-size: 1.3em; }
-.blog-entry { padding-bottom: 8px; background-image: url('/img/bg_dot.gif'); background-repeat: repeat-x; background-position: left bottom; }
+.blog-entry { padding-bottom: 8px; background-image: url('/images/bg_dot.gif'); background-repeat: repeat-x; background-position: left bottom; }
 .blog-entry ul, .blog-entry ol { padding-left: 1em; line-height: 1.3em; margin: 1.2em 0em 1.2em 0em; }
 .blog-entry h1 a:link { color: #EC5800; text-decoration: none; }
 .blog-entry h1 a:visited { color: #EC5800; text-decoration: none; }
@@ -355,13 +355,13 @@ div.navtabs_grey a:hover span { background-position: 100% -150px; }
 
 #download-btn { padding: 6px 0 15px 0; }
 #download-btn table { border-collapse: collapse; border-spacing: 0px; }
-#download-btn .left { background-image: url('/img/btn_download_lft.png'); background-repeat: no-repeat; width: 9px; height: 60px; cursor: pointer; }
-#download-btn .middle { background-color: #1185FB; background-image: url('/img/btn_download_mid.png'); background-repeat: repeat-x; height: 60px; padding: 0px 15px; cursor: pointer; white-space: nowrap; }
+#download-btn .left { background-image: url('/images/btn_download_lft.png'); background-repeat: no-repeat; width: 9px; height: 60px; cursor: pointer; }
+#download-btn .middle { background-color: #1185FB; background-image: url('/images/btn_download_mid.png'); background-repeat: repeat-x; height: 60px; padding: 0px 15px; cursor: pointer; white-space: nowrap; }
 #download-btn .link { color: #fff; font-weight: bold; font-size: 1.5em; }
 #download-btn .version { text-align: center; padding-top: 6px; }
 #download-btn .version span { color: #9A9CA0; font-size: 0.95em; }
 #download-btn .version div { padding-top: 10px; }
-#download-btn .right { background-image: url('/img/btn_download_rgt.png'); background-repeat: no-repeat; width: 9px; height: 60px; cursor: pointer; }
+#download-btn .right { background-image: url('/images/btn_download_rgt.png'); background-repeat: no-repeat; width: 9px; height: 60px; cursor: pointer; }
 #download-btn .link a:link { color: #fff; text-decoration: none; }
 #download-btn .link a:visited { color: #fff; text-decoration: none; }
 #download-btn .link a:active { color: #fff; text-decoration: none; }
