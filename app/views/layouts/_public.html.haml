@@ -1,0 +1,71 @@
+!!!
+%html(xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://www.facebook.com/2008/fbml")
+  %head
+    %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %title 
+      = t :title
+    = stylesheet_link_tag :all
+    
+    = fb_connect_javascript_tag(:lang => ::I18n.locale)
+    = javascript_include_tag :defaults, 'devise.facebook_connectable'
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
+    
+    = yield(:head)
+  %body
+    %script
+      jQuery.noConflict();
+    = init_fb_connect :XFBML, :js => :jquery
+    #topbar
+      .content
+        %span.login
+          - if user_signed_in?
+            = t :sign_in_as
+            - if current_user.facebook_uid? 
+              %b #{current_user.username}
+
+              :plain
+                <a href="#" onclick="try {
+                  FB.Connect.logoutAndRedirect(&quot;/users/sign_out?locale=fr&quot;);
+                } catch (e) { alert('RJS error:\n\n' + e.toString()); alert('FB.Connect.logoutAndRedirect(\&quot;/users/sign_out?locale=fr\&quot;);'); throw e }; return false;">
+              = t :sign_out
+              :plain
+                </a>
+              .facebook_connect_link.sign_out          
+              %form(action="/users/sign_out?locale=fr" id="fb_connect_sign_out_form" method="get" style="display:none;")
+            - else
+              %b #{current_user.email}
+              = link_to t(:sign_out), destroy_user_session_path
+          -else
+            = t :already_member
+            %b
+              = link_to t('devise.sessions.link'), :new_user_session
+        %table.tbl-container
+          %tr
+            %td
+              %span.welcome
+                %b 
+                  = t :welcome
+            %td
+              &nbsp;
+              = link_to t(:change_locale), I18n.locale == :en ? '/?locale=fr' : '/?locale=en'
+      
+      
+      #topnav
+        .logo
+          %a(href="/")
+            %img#topnav-logo(alt="Ou est ma perceuse?" src="/images/perceuse.png")    
+        .content
+          %ul
+            %li.top-nav-home
+              = link_to t(:home), :root
+            %li.top-nav-signup
+              = link_to t('devise.registrations.link'), :new_user_registration
+            %li.top-nav-services
+              = link_to t('devise.sessions.link'), :new_user_session
+
+      %p.notice= notice
+      %p.alert= alert
+      
+    = yield
+

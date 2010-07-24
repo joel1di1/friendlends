@@ -1,17 +1,3 @@
-
-#topnav
-  .logo
-    %a(href="/")
-      %img#topnav-logo(alt="Ou est ma perceuse?" src="/images/perceuse.png")    
-  .content
-    %ul
-      %li.top-nav-home
-        = link_to t(:home), :root
-      %li.top-nav-signup
-        = link_to t('devise.registrations.link'), :new_user_registration
-      %li.top-nav-services
-        = link_to t('devise.sessions.link'), :new_user_session
-
 #hp-feature
   .content
     .list

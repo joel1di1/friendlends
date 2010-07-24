@@ -1,41 +1,46 @@
-
-%h1 Bienvenue dans 'Où est ma perceuse ?'
-
-#description
-  #contents
-    %p Ce site vous permet de tracer tous les petits (ou gros) prêts que vous faite à vos amis.
-  
-    #explications 
-      Simple d'utilisation
-      %ol
-        %li Quoi ?
-        %li Qui ?
-        %li GO ! 
+#pageheader
+  .content
+    %h1= t 'devise.sessions.link'
+#container
+  .content
+    .contentbox
+      .contentboxwrap
+        %center
+          = facebook_sign_in_link :perms=>'email'
+%center
+  %h1= t :or
+#container
+  .content
+    .contentbox
+      .contentboxwrap
+        %center
+          - form_for resource_name, resource, :url => session_path(resource_name) do |f|
+            %table
+              %tboby
+                %tr
+                  %td.label
+                    = f.label t :email
+                  %td.field
+                    = f.text_field :email, :size=>30
+                  %tr
+                    %td.label
+                      = f.label t :password
+                    %td.field
+                      = f.password_field :password, :size=>30
+                  - if devise_mapping.rememberable?
+                    %tr
+                      %td.hiddenlabel
+                        %label
+                      %td.field(colspan=2)
+                        = f.check_box :remember_me
+                        = f.label t :remember_me
+                    %tr
+                      %td.hiddenlabel
+                        %label
+                      %td.field(colspan=2)
+                        = f.submit t 'devise.sessions.link'
+                        = link_to t('devise.passwords.link'), new_password_path(resource_name)
       
-        Ensuite, il ne vous reste plus qu'à chercher votre objet pour retrouver instantanément à qui vous l'avez prêté.
 
-.right_col_container
-  .right_col.sign_up_box
-    = facebook_sign_in_link :perms=>'email'
-    %h2
-      =t :or
-    
-    - form_for resource_name, resource, :url => session_path(resource_name) do |f|
-      = f.label t :email
-      = f.text_field :email, :size=>30
-      %br
-      = f.label t :password
-      = f.password_field :password, :size=>30
-
-      - if devise_mapping.rememberable?
-        %p
-          = f.check_box :remember_me
-          = f.label t :remember_me
-
-      %p
-        = f.submit t :sign_in
-        
-    = render :partial => "shared/devise_links"
-    
 
 
