@@ -12,10 +12,25 @@
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
     
     = yield(:head)
-  %body
+  %body(id="hp")
     %script
       jQuery.noConflict();
     = init_fb_connect :XFBML, :js => :jquery
+    #topbar
+      .content
+        %span.login
+          = t :already_member
+          = link_to t('devise.sessions.link'), :new_user_session
+        %table.tbl-container
+          %tr
+            %td
+              %span.welcome
+                %b 
+                  = t :welcome
+            %td
+              &nbsp;
+              = link_to t(:change_locale), I18n.locale == :en ? '/?locale=fr' : '/?locale=en'
+                  
     #main
       .user_nav
         - if user_signed_in?
@@ -35,8 +50,6 @@
           - else
             %b #{current_user.email}
             = link_to t(:sign_out), destroy_user_session_path
-      .change_locale 
-        = link_to t(:change_locale), I18n.locale == :en ? '/?locale=fr' : '/?locale=en'
       %p.notice= notice
       %p.alert= alert
       #content
