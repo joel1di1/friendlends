@@ -26,7 +26,9 @@ fr:
   display_hide_returned: "Afficher/masquer les retours"
   already_member: Déjà membre ?
   welcome: Bienvenue !
-  
+  home: Accueil
+  tagline_1: Ne perdez plus vos affaires.
+  tagline_2: Retrouvez qui vous a emprunté votre perceuse (ou quoique ce soit d'autre).
    
   devise:
     failure:

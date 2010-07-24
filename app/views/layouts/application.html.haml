@@ -19,8 +19,26 @@
     #topbar
       .content
         %span.login
-          = t :already_member
-          = link_to t('devise.sessions.link'), :new_user_session
+          - if user_signed_in?
+            = t :sign_in_as
+            - if current_user.facebook_uid? 
+              %b #{current_user.username}
+
+              :plain
+                <a href="#" onclick="try {
+                  FB.Connect.logoutAndRedirect(&quot;/users/sign_out?locale=fr&quot;);
+                } catch (e) { alert('RJS error:\n\n' + e.toString()); alert('FB.Connect.logoutAndRedirect(\&quot;/users/sign_out?locale=fr\&quot;);'); throw e }; return false;">
+              = t :sign_out
+              :plain
+                </a>
+              .facebook_connect_link.sign_out          
+              %form(action="/users/sign_out?locale=fr" id="fb_connect_sign_out_form" method="get" style="display:none;")
+            - else
+              %b #{current_user.email}
+              = link_to t(:sign_out), destroy_user_session_path
+          -else
+            = t :already_member
+            = link_to t('devise.sessions.link'), :new_user_session
         %table.tbl-container
           %tr
             %td
@@ -30,29 +48,9 @@
             %td
               &nbsp;
               = link_to t(:change_locale), I18n.locale == :en ? '/?locale=fr' : '/?locale=en'
-                  
-    #main
-      .user_nav
-        - if user_signed_in?
-          = t :sign_in_as
-          - if current_user.facebook_uid? 
-            %b #{current_user.username}
-            
-            :plain
-              <a href="#" onclick="try {
-                FB.Connect.logoutAndRedirect(&quot;/users/sign_out?locale=fr&quot;);
-              } catch (e) { alert('RJS error:\n\n' + e.toString()); alert('FB.Connect.logoutAndRedirect(\&quot;/users/sign_out?locale=fr\&quot;);'); throw e }; return false;">
-            = t :sign_out
-            :plain
-              </a>
-            .facebook_connect_link.sign_out          
-            %form(action="/users/sign_out?locale=fr" id="fb_connect_sign_out_form" method="get" style="display:none;")
-          - else
-            %b #{current_user.email}
-            = link_to t(:sign_out), destroy_user_session_path
+
       %p.notice= notice
       %p.alert= alert
-      #content
-        %center
-          = yield
+      
+    = yield
 

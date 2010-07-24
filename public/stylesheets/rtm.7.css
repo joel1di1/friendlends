@@ -18,7 +18,7 @@ h4 { font-size: 1.2em; margin: 1.2em 0em 0.4em 0em; }
 h5 { font-size: 1.0em; margin: 1.2em 0em 0.4em 0em; }
 h6 { font-size: 0.8em; margin: 1.2em 0em 0.4em 0em; }
 
-#topbar { background-image: url('/img/bg_dot.gif'); background-repeat: repeat-x; background-position: left bottom; }
+#topbar { background-image: url('/images/bg_dot.gif'); background-repeat: repeat-x; background-position: left bottom; }
 #topbar .content { margin: 0em auto; width: 765px; padding: 5px 0px; }
 #topbar .welcome { }
 #topbar .login { float: right; }
@@ -45,7 +45,7 @@ h6 { font-size: 0.8em; margin: 1.2em 0em 0.4em 0em; }
 #topnav li.selected a:visited { color: #fff; text-decoration: none; }
 #topnav li.selected a:active { color: #fff; text-decoration: none; }
 #topnav li.selected a:hover { color: #fff; text-decoration: none; }
-#topnav-logo { width: 188px; height: 83px; }
+#topnav-logo { height: 83px;}
 
 #pageheader { background-color: #005CB8; padding: 10px 0; clear: both; }
 #pageheader .content { margin: 0em auto; width: 765px; }

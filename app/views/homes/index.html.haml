@@ -1,15 +1,24 @@
 
+#topnav
+  .logo
+    %a(href="/")
+      %img#topnav-logo(alt="Ou est ma perceuse?" src="/images/perceuse.png")    
+  .content
+    %ul
+      %li.top-nav-home
+        = link_to t(:home), :root
+      %li.top-nav-signup
+        = link_to t('devise.registrations.link'), :new_user_registration
+      %li.top-nav-services
+        = link_to t('devise.sessions.link'), :new_user_session
 
-%h1 Bienvenue dans 'Où est ma perceuse ?'
-
-#contents
-  %p Ce site vous permet de tracer tous les petits (ou gros) prêts que vous faite à vos amis.
-  
-  #explications 
-    Simple d'utilisation
-    %ol
-      %li Quoi ?
-      %li Qui ?
-      %li GO ! 
+#hp-feature
+  .content
+    .list
+      %img(src="http://0.static.rememberthemilk.com/img/intl/fr/hp_list.png")
+    .promo
+      %h1
+        = t :tagline_1
+      %h2
+        = t :tagline_2
       
-    Ensuite, il ne vous reste plus qu'à chercher votre objet pour retrouver instantanément à qui vous l'avez prêter.
