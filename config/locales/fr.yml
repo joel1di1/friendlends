@@ -7,7 +7,7 @@ fr:
   borrower: "Emprunteur"
   loan_date: "Date"
   loans_title: "Mes prêts"
-  sign_up: "Enregistrez-vous"
+  sign_up: "Enregistrement"
   sign_out: "déconnexion"
   or: "ou"
   email: email
@@ -29,6 +29,7 @@ fr:
   home: Accueil
   tagline_1: Ne perdez plus vos affaires.
   tagline_2: Retrouvez qui vous a emprunté votre perceuse (ou quoique ce soit d'autre).
+  free: (Gratuit)
    
   devise:
     failure:

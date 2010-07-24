@@ -1,0 +1,15 @@
+#signupwrap {
+  border: 2px solid #CBDCED;
+  text-align: left;
+  padding: 30px 10px 20px 30px;
+  clear: both;
+}
+
+#signupwrap .label {
+  padding-top: 2px;
+  padding-right: 8px;
+  vertical-align: top;
+  text-align: right;
+  width: 125px;
+  white-space: nowrap;
+}
