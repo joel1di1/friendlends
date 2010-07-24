@@ -9,7 +9,6 @@ fr:
   loans_title: "Mes prêts"
   sign_up: "Enregistrez-vous"
   sign_out: "déconnexion"
-  sign_in: "connectez-vous"
   or: "ou"
   email: email
   password: mot de passe
@@ -25,6 +24,8 @@ fr:
   change_locale: "Anglais"
   un_return: "Non rendu"
   display_hide_returned: "Afficher/masquer les retours"
+  already_member: Déjà membre ?
+  welcome: Bienvenue !
   
    
   devise:
@@ -39,7 +40,7 @@ fr:
     sessions:
       signed_in: 'Vous êtes maintenant connecté.'
       signed_out: 'Vous n''êtes plus connecté.'
-      link: 'Connectez-vous'
+      link: 'Connexion'
       facebook_invalid: "Could not sign in. Invalid account."
       facebook_timeout: "Facebook session expired., please sign in again to continue."
       facebook_authenticity_token: "Something went wrong. For security reasons, please sign in again."
