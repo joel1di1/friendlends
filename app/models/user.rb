@@ -8,4 +8,10 @@ class User < ActiveRecord::Base
   
   has_many :loans
   
+  def before_facebook_connect(fb_session)
+    
+    fb_session.user.populate(:first_name, :last_name)
+
+    self.username           = fb_session.user.first_name + " " + fb_session.user.last_name
+  end
 end
