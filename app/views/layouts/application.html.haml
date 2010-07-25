@@ -20,6 +20,7 @@
     = yield(:head)
   %body
     %script
+       jQuery.noConflict();
     = init_fb_connect :XFBML, :js => :jquery
     #content
       #appheader
