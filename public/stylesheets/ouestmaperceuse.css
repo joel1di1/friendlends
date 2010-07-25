@@ -18,6 +18,15 @@
   white-space: nowrap;
 }
 
+#facebook_login_wrapper{
+	background-color: #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 230px;
+	height: 50px;
+	text-align: center;
+}
+
 #main-title .content {
 	
 }

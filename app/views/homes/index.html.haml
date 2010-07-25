@@ -16,5 +16,7 @@
               %td.tour
                 =t :or
               %td.tour
-                = facebook_sign_in_link :perms=>'email', :id=>"fblogin"
+                #facebook_login_wrapper
+                  .blank(style="height:12px")
+                  = facebook_sign_in_link :perms=>'email', :id=>"fblogin"
       
