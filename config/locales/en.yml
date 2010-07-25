@@ -34,5 +34,9 @@ en:
   who: Who?
   add_loan: Create
   
+  devise:
+    registrations:
+      signed_up: 'You have signed up successfully.'
+    
   
   
