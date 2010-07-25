@@ -1,0 +1,26 @@
+/* French Homepage */
+
+/* Header */
+
+#conttbl1 img { width: 210px; height: 85px; }
+#topnav li { padding-left: 15px; }
+#hp-signup-btn .middle { padding: 0px 22px; }
+#hp-quote { width: 465px; }
+#hp-announce h2 { font-size: 1.35em; }
+
+/* Buttons */
+
+#statusboxbuttons { width: 167px; }
+.roundbtn { width: 75px; }
+.gobtn { width: 75px; }
+.mfbtn_tod { width: 88px; }
+.mfbtn_tom { width: 66px; }
+.mfbtn_tw { width: 100px; }
+.mfbtn_for { width: 120px; }
+.lsbtn { width: 74px; }
+
+/* App */
+
+#listtoolbox { width: 100px; }
+.addEntryTask { margin-top: 4px; margin-bottom: -4px; }
+.iw_saveloc input { width: 75px; }
