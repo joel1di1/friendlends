@@ -1,3 +1,7 @@
+.pretty-hover{
+	cursor:pointer;
+}
+
 #signupwrap {
   border: 2px solid #CBDCED;
   text-align: left;
@@ -24,4 +28,126 @@
   font-size:2.5em;
   font-weight:bold;
   padding-left:220px;
+}
+
+#topnav span{
+  font-weight:bold;
+}
+
+#appheaderlogo {
+}
+
+#break  {
+  clear:both;
+  margin:0;
+  padding-bottom:0.75em;
+  padding-top:0.75em;
+}
+
+#statusbox{
+  margin-top:3em;
+  padding-left: 207px;
+  height: 4.1em;
+}
+
+#orange_rbroundbox{
+  	background-color: #ffb659;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #777;
+	padding: 10px;
+}
+
+#orange_rbroundbox #content{
+	padding:0 0;
+	text-align:left;
+	width:100%;
+	font-weight: bold;
+}
+
+#listbox{
+	float:left;
+	width:670px;
+	border: 1px solid #AAA;
+	-moz-border-radius-topleft: 6px;
+	-webkit-border-top-left-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	-webkit-border-top-right-radius: 6px;
+}
+#detailsbox{
+	float:right;
+	position:relative;
+	width:295px;
+	border: 1px solid #AAA;
+	background-color:#F9F9F9;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+#toggle_returned{
+	width:100%;
+	text-align: right;
+	font-style: italic;
+	padding-top: 5px;
+}
+
+#newloan{
+  padding: 10px 0px;
+  border-bottom:1px solid #CACACA;
+}
+
+#newloan label{
+  padding-left: 10px;
+  float:left;
+}
+
+#newloan input{
+  padding-left: 5px;
+}
+
+#newloan #loan_desc, #newloan #loan_borrower{
+  	background-color:transparent;
+	border:0 none;
+	margin:3px 10px 3px 0;
+	outline:medium none;
+	width: 100%;
+	float:left;
+}
+
+.input_new_loan{
+	background-color: #fff;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border: 1px solid #777;
+	float:left;
+}
+
+#loan_desc_wrapper{
+	width:20em;
+}
+
+
+#loan_borrower_wrapper{
+	width:10em;
+}
+
+#loans_table{
+  width:100%;
+}
+
+#loans_table td{
+  border-bottom:1px solid #CACACA;
+}
+
+#loans_table td.desc{
+  width: 380px;
+  cursor: pointer;
+}
+#loans_table td.borrower{
+  width: 100px;
+  cursor: pointer;
+}
+
+.current_line{
+	background-color: #dcf8cc;
 }

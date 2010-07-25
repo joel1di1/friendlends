@@ -8,7 +8,7 @@ fr:
   loan_date: "Date"
   loans_title: "Mes prêts"
   sign_up: "Enregistrement"
-  sign_out: "déconnexion"
+  sign_out: "Déconnexion"
   or: "ou"
   email: email
   password: mot de passe
@@ -23,13 +23,18 @@ fr:
   title: "Où est ma perçeuse ?"
   change_locale: "Anglais"
   un_return: "Non rendu"
-  display_hide_returned: "Afficher/masquer les retours"
+  display_returned: "Afficher les objects rendus"
+  hide_returned: "Masquer les objects rendus"
   already_member: Déjà membre ?
   welcome: Bienvenue !
   home: Accueil
   tagline_1: Ne perdez plus vos affaires.
   tagline_2: Retrouvez qui vous a emprunté votre perceuse (ou quoique ce soit d'autre).
   free: (Gratuit)
+  who: Qui ?
+  what: Quoi ?
+  add_loan: Créer
+  detail_advice: Ajouter vos prêts en utilisant les champs en haut a gauche.
    
   devise:
     failure:

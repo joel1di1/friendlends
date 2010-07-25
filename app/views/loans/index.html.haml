@@ -1,44 +1,38 @@
-%h1 
-  =t :loans_title
-
-%table
-  %tr
-    %th 
-      = t :lend_object
-    %th 
-      = t :borrower
-    %th 
-      = t :loan_date
-    %th
-      = t :loan_return_date
-    %th
-      = link_to t(:display_hide_returned), {:display_returned => !params[:display_returned]}
-  - @loans.each do |loan| 
-    %tr
-      %td 
-        = loan.desc
-      %td 
-        = loan.borrower
-      %td 
-        = l loan.start_date, :format => :short
-      %td 
-        = loan.return_date 
-      %td 
-        - if !loan.return_date
-          = button_to t(:return), { :action => "return", :id => loan.id }
-        - else
-          = button_to t(:un_return), { :action => "un_return", :id => loan.id }
-      %td 
-        = link_to 'Edit', edit_loan_path(loan)
-      %td 
-        = link_to t(:delete), loan, :confirm =>  t(:confirm), :method => :delete
-          
-  %tr
+#listbox
+  #newloan
     - form_for(@loan) do |f|
-      %td 
-        = f.text_field :desc
-      %td 
-        = f.text_field :borrower
-      %td{:colspan => "4"} 
-        = f.submit 'Create' 
+      = f.label t :what
+      #loan_desc_wrapper.input_new_loan
+        = f.text_field :desc, :size=>nil
+      = f.label t :who
+      #loan_borrower_wrapper.input_new_loan
+        = f.text_field :borrower, :size=>nil
+      = f.submit t :add_loan
+  #loans
+    %table#loans_table(cellpadding=0 cellspacing=0)
+      %tbody
+        - @loans.each do |loan| 
+          %tr{:id=>loan.id}
+            %td.desc
+              = loan.desc
+            %td.borrower
+              = loan.borrower
+            %td.date
+              = l loan.start_date, :format => :short
+            %td.returned_date
+              = loan.return_date 
+            %td.return_action
+              - if !loan.return_date
+                = button_to t(:return), { :action => "return", :id => loan.id }
+              - else
+                = button_to t(:un_return), { :action => "un_return", :id => loan.id }
+            %td.delete
+              = button_to t(:delete), loan, :confirm =>  t(:confirm), :method => :delete 
+  #toggle_returned
+    - if params.include? :display_returned
+      = link_to t(:hide_returned), {:display_returned => !params[:display_returned]}
+    -else
+      = link_to t(:display_returned), {:display_returned => !params[:display_returned]}
 
+#detailsbox
+  %p= t :detail_advice
