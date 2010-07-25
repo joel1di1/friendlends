@@ -1,3 +1,41 @@
+#hp-feature { background-color: #005CB8; background-image: url('/images/hp_bg.png'); repeat: repeat-x; clear: both; }
+#hp-feature .content { margin: 0em auto; width: 765px; color: #fff; height: 250px; }
+#hp-feature .list { float: left; }
+#hp-feature .list img { top: -12px; margin-bottom: -12px; position: relative; width: 252px; height: 262px; padding-right: 27px; }
+#hp-feature .promo { padding-top: 62px; }
+#hp-feature .promo h1 { color: #fff; font-size: 2.2em; margin: 0; }
+#hp-feature .promo h2 { color: #CCDEF1; font-size: 1.7em; margin-top: 0em; }
+#hp-feature .account { text-align: center; padding-top: 4px; color: #B3CEEA; }
+#hp-feature .tour { padding-left: 18px; font-size: 1.3em; }
+#hp-feature .tour a:link { text-decoration: underline; }
+#hp-feature .tour a:visited { text-decoration: underline; }
+#hp-feature .tour a:active { text-decoration: underline; }
+#hp-feature .tour a:hover { color: #B3CEEA; text-decoration: underline; }
+#hp-feature .tour-link { font-weight: bold; }
+
+#hp-signup-btn { margin-top: 15px; }
+#hp-signup-btn table { border-collapse: collapse; border-spacing: 0px; }
+#hp-signup-btn .left { background-image: url('/images/hp_signup_lft.png'); background-repeat: no-repeat; width: 7px; height: 52px; cursor: pointer; }
+#hp-signup-btn .middle { background-image: url('/images/hp_signup_mid.png'); background-repeat: repeat-x; height: 52px; padding: 0px 33px; cursor: pointer; white-space: nowrap; }
+#hp-signup-btn .link { color: #fff; font-weight: bold; font-size: 1.5em; }
+#hp-signup-btn .right { background-image: url('/images/hp_signup_rgt.png'); background-repeat: no-repeat; width: 7px; height: 52px; cursor: pointer; }
+#hp-signup-btn a:link { color: #fff; text-decoration: none; }
+#hp-signup-btn a:visited { color: #fff; text-decoration: none; }
+#hp-signup-btn a:active { color: #fff; text-decoration: none; }
+#hp-signup-btn a:hover { color: #fff; text-decoration: none; }
+
+#hp-services { width: 765px; }
+#hp-services h3 { text-align: center; color: #868686; font-weight: normal; font-size: 1.2em; margin: 0.5em 0 0.8em 0; }
+#hp-services table { border-collapse: collapse; border-spacing: 0px; }
+#hp-services table td { padding: 1px; font-weight: bold; text-align: center; vertical-align: top; }
+#hp-services img { margin-bottom: 4px; width: 150px; height: 100px; }
+#hp-services a:link { text-decoration: none; }
+#hp-services a:visited { text-decoration: none; }
+#hp-services a:active { text-decoration: none; }
+#hp-services a:hover { color: #0060BF; text-decoration: underline; }
+
+#hp #container { padding-top: 0; }
+
 #signupwrap {
   border: 2px solid #CBDCED;
   text-align: left;
