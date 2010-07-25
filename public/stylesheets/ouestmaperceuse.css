@@ -22,6 +22,15 @@
 	
 }
 
+#infos{
+  margin:0 auto;
+  background-color: #ffb659;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-align: center;
+  font-style:italic;
+  width:450px;
+}
 
 #main-title .content h1{
   color:#0060BF;
