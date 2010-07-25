@@ -13,3 +13,15 @@
   width: 125px;
   white-space: nowrap;
 }
+
+#main-title .content {
+	
+}
+
+
+#main-title .content h1{
+  color:#0060BF;
+  font-size:2.5em;
+  font-weight:bold;
+  padding-left:220px;
+}

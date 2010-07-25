@@ -32,7 +32,6 @@ h6 { font-size: 0.8em; margin: 1.2em 0em 0.4em 0em; }
 
 #topnav { margin: 0em auto; width: 765px; padding: 10px 0 17px 0; }
 #topnav .logo { float: left; }
-#topnav .content { padding-top: 50px; padding-bottom: 17px; }
 #topbar .switcher { width: 7px; height: 7px; }
 #topnav ul { display: inline; list-style: none; padding-left: 30px; }
 #topnav li { display: inline; font-size: 1.3em; font-weight: bold; font-family: arial, helvetica, sans-serif; color: #A7A7A7; padding-left: 32px; }
