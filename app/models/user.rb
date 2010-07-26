@@ -14,4 +14,9 @@ class User < ActiveRecord::Base
 
     self.username           = fb_session.user.first_name + " " + fb_session.user.last_name
   end
+  
+  def screen_name
+    return username unless username.blank?
+    email
+  end
 end
