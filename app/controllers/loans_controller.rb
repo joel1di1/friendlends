@@ -4,14 +4,17 @@ class LoansController < ApplicationController
   # GET /loans
   # GET /loans.xml
   def index
+    
+    
     if params[:display_returned]
-      @loans = Loan.find(:all, :conditions => {"lender_id" => current_user.id})
+      @loans = Loan.find(:all, :conditions => ["lender_id = :lender_id AND desc like :search", {:lender_id => current_user.id, :search => "%#{params[:search]}%" }] )
     else
-      @loans = Loan.find(:all, :conditions => {"lender_id" => current_user.id, :return_date => nil})
+      @loans = Loan.find(:all, :conditions => ["lender_id = :lender_id AND return_date IS NULL AND desc like :search", {:lender_id => current_user.id, :search => "%#{params[:search]}%" }] )
     end
     @loan = Loan.new
 
     respond_to do |format|
+      format.js 
       format.html # index.html.erb
       format.xml  { render :xml => @loans }
     end

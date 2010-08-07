@@ -3,7 +3,7 @@
     - form_for(@loan) do |f|
       = f.label t :what
       #loan_desc_wrapper.input_new_loan
-        = f.text_field :desc, :size=>nil
+        = text_field_with_auto_complete :loan, :desc, {}, {:url => formatted_loans_path(:js), :method => :get, :with => "'search=' + element.value" }
       = f.label t :who
       #loan_borrower_wrapper.input_new_loan
         = f.text_field :borrower, :size=>nil

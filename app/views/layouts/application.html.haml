@@ -10,6 +10,9 @@
     = fb_connect_javascript_tag(:lang => ::I18n.locale)
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
     = javascript_include_tag 'devise.facebook_connectable'
+    = javascript_include_tag 'prototype'
+    = javascript_include_tag 'effects'
+    = javascript_include_tag 'controls'
     = javascript_include_tag 'application'
     
     %script
@@ -19,7 +22,6 @@
     
     = yield(:head)
   %body
-    %script
     = init_fb_connect :XFBML, :js => :jquery
     #content
       #appheader
