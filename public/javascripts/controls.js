@@ -46,7 +46,7 @@ Autocompleter.Base = Class.create({
     this.hasFocus    = false;
     this.changed     = false;
     this.active      = false;
-    this.index       = 0;
+    this.index       = -1;
     this.entryCount  = 0;
     this.oldElementValue = this.element.value;
 
@@ -128,6 +128,7 @@ Autocompleter.Base = Class.create({
     if(this.active)
       switch(event.keyCode) {
        case Event.KEY_TAB:
+		 return;
        case Event.KEY_RETURN:
          this.selectEntry();
          Event.stop(event);
