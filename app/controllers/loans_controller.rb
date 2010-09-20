@@ -7,7 +7,7 @@ class LoansController < ApplicationController
     
     
     if params[:display_returned]
-      @loans = Loan.find(:all, :conditions => ["lender_id = :lender_id AND desc like :search", {:lender_id => current_user.id, :search => "%#{params[:search]}%" }] )
+      @loans = Loan.find(:all, :conditions => ["lender_id = :lender_id AND \"desc\" like :search", {:lender_id => current_user.id, :search => "%#{params[:search]}%" }] )
     else
       @loans = Loan.find(:all, :conditions => ["lender_id = :lender_id AND return_date IS NULL AND \"desc\" like :search", {:lender_id => current_user.id, :search => "%#{params[:search]}%" }] )
     end
