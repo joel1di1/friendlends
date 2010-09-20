@@ -35,7 +35,17 @@ fr:
   what: Quoi ?
   add_loan: Créer
   detail_advice: Ajouter vos prêts en utilisant les champs en haut a gauche.
-   
+  edit_loan: Modifier un pret
+  desc: Decription
+  borrower: Emprunteur
+  start_date: Date d'emprunt
+  end_date: Date de retour
+  back: Retour à la liste
+  update: Mettre à jour
+  edit: Editer
+  show_loan: Détail
+  
+     
   devise:
     failure:
       unauthenticated: 'Vous devez être connecté poyur continuer.'

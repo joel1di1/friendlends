@@ -29,10 +29,19 @@ en:
   welcome: Welcome!
   home: Home
   free:  (Free)
-  
   what: What?
   who: Who?
   add_loan: Create
+  detail_advice: Add loans with top left fields.
+  edit_loan: Modify loan
+  desc: Decription
+  borrower: Borrower
+  start_date: Loan date
+  end_date: Return date
+  back: Back to list
+  update: Update
+  edit: Edit
+  show_loan: Loan detail
   
   devise:
     registrations:

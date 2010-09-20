@@ -1,0 +1,22 @@
+%h1= t :edit_loan
+- form_for(@loan) do |f|
+  = f.error_messages
+  %p
+    = f.label t :desc
+    %br/
+    = f.text_field :desc
+  %p
+    = f.label t :borrower
+    %br/
+    = f.text_field :borrower
+  %p
+    = f.label t :start_date
+    %br/
+    = f.date_select :start_date, :use_short_month=>true, :include_blank=>true
+  %p
+    = f.label t :end_date
+    %br/
+    = f.date_select :return_date, :use_short_month=>true, :include_blank=>true
+  %p
+    = f.submit t :update
+= link_to (t :back), loans_path

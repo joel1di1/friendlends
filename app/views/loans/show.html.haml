@@ -1,0 +1,25 @@
+%h1
+  = t :show_loan
+  \:
+%p
+  %b
+    = t  :desc 
+    \:
+  = h @loan.desc
+%p
+  %b
+    = t :borrower
+    \:
+  = h @loan.borrower
+%p
+  %b
+    = t :start_date
+    \:
+  = h @loan.start_date
+%p
+  %b
+    = t :end_date
+    \:
+  = h @loan.return_date
+= link_to (t :edit), edit_loan_path(@loan)
+= link_to (t :back), loans_path
