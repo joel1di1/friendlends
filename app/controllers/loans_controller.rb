@@ -26,7 +26,7 @@ class LoansController < ApplicationController
     @loan = Loan.find(params[:id])
 
     respond_to do |format|
-      format.html {render :action => "update"}
+      format.html
       format.xml  { render :xml => @loan }
     end
   end
