@@ -20,7 +20,7 @@
             %td.date
               = l loan.start_date, :format => :short
             %td.returned_date
-              = loan.return_date 
+              = l loan.return_date, :format => :short unless loan.return_date == nil
             %td.return_action
               - if !loan.return_date
                 = button_to t(:return), { :action => "return", :id => loan.id }

@@ -158,7 +158,7 @@
 }
 
 #loans_table td.desc{
-  width: 380px;
+  width: 310px;
   cursor: pointer;
 }
 #loans_table td.borrower{
@@ -168,4 +168,13 @@
 
 .current_line{
 	background-color: #dcf8cc;
+}
+
+#loans_table td.date, {
+  white-space: nowrap;
+}
+
+#loans_table td.returned_date{
+  white-space: nowrap;
+  font-style:italic;
 }
